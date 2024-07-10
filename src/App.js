@@ -4,6 +4,11 @@ const initialItems = [
   { id: 2, description: "Socks", quantity: 12, packed: false },
   { id: 2, description: "Charger", quantity: 1, packed: false },
   { id: 2, description: "t-shirt", quantity: 5, packed: false },
+  { id: 2, description: "t-shirt", quantity: 5, packed: false },
+  { id: 2, description: "t-shirt", quantity: 5, packed: false },
+  { id: 2, description: "t-shirt", quantity: 5, packed: false },
+  { id: 2, description: "t-shirt", quantity: 5, packed: false },
+  { id: 2, description: "t-shirt", quantity: 5, packed: false },
 ];
 export default function App() {
   return (
@@ -30,8 +35,8 @@ function Form() {
 
 function PackingList() {
   return (
-    <div className="list">
-      <ul>
+    <div className="items-list">
+      <ul className="list">
         {initialItems.map((item) => (
           <Item item={item} />
         ))}
