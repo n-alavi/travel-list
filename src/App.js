@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./index.css";
 const initialItems = [
   { id: 1, description: "Passports", quantity: 2, packed: false },
@@ -26,6 +27,7 @@ function Logo() {
 }
 
 function Form() {
+  const [description, setDescription] = useState("");
   function HandleSubmit(e) {
     e.preventDefault();
     console.log(e);
