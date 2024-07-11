@@ -17,7 +17,7 @@ export default function App() {
     setItems((items) => [...items, item]);
   }
   function handleDeleteItem(id) {
-    setItems((item) => item.id !== id);
+    setItems((items) => items.filter((item) => item.id !== id));
   }
   return (
     <div className="app">
@@ -74,7 +74,7 @@ function PackingList({ items, onDeleteItem }) {
   return (
     <div className="items-list">
       <ul className="list">
-        {item.map((item) => (
+        {items.map((item) => (
           <Item item={item} onDeleteItem={onDeleteItem} key={item.id} />
         ))}
       </ul>
