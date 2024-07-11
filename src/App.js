@@ -28,7 +28,9 @@ function Logo() {
 
 function Form() {
   const [description, setDescription] = useState("");
-  const [quantity, setQuantity] = useState(5);
+  const [quantity, setQuantity] = useState(1);
+  const newItem = { description, quantity, packed: false, id: Date.now() };
+  console.log(newItem);
   function HandleSubmit(e) {
     e.preventDefault();
     console.log(e);
