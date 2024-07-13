@@ -35,7 +35,7 @@ export default function App() {
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
       />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
@@ -115,11 +115,15 @@ function Item({ item, onDeleteItem, onToggleItem }) {
   );
 }
 
-function Stats() {
+function Stats({ items }) {
+  const numItems = items.length;
   return (
     <div>
       <footer className="stats">
-        <em>🎒 You have x items on your list.and you already packed x (x%) </em>
+        <em>
+          🎒 You have {numItems} items on your list.and you already packed x
+          (x%){" "}
+        </em>
       </footer>
     </div>
   );
