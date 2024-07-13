@@ -117,12 +117,14 @@ function Item({ item, onDeleteItem, onToggleItem }) {
 
 function Stats({ items }) {
   const numItems = items.length;
+  const numPacked = items.filter((item) => item.packed).length;
+  const percentage = Math.round((numPacked / numItems) * 100);
   return (
     <div>
       <footer className="stats">
         <em>
-          🎒 You have {numItems} items on your list.and you already packed x
-          (x%){" "}
+          🎒 You have {numItems} items on your list.and you already packed{" "}
+          {numPacked} ({percentage}%)
         </em>
       </footer>
     </div>
