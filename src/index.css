@@ -92,7 +92,10 @@ input {
   font-weight: 700;
   margin: 0 0.8rem;
 }
-
+.actions {
+  display: flex;
+  justify-content: center;
+}
 .list ul {
   list-style: none;
   width: 80%;
